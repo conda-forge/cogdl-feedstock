@@ -1,5 +1,5 @@
 {% set name = "cogdl" %}
-{% set version = "0.1.2" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/THUDM/cogdl/archive/{{ version }}.tar.gz
-  sha256: 4c35bcc20e9bd7e9928c6e5a02d2ca974d42ad47255ad7dafd70cbec5da079d6
+  sha256: fb86888d07abe163d1d91e532b09175f017f6a4fb27c10f6ea81e37f21a47a55
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -67,7 +67,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'An Extensive Research Toolkit for Graphs'
+  summary: An Extensive Research Toolkit for Graphs
   description: |
     CogDL is a graph representation learning toolkit that allows researchers
     and developers to easily train and compare baseline or custom models for
